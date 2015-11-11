@@ -127,3 +127,4 @@ Route::get('/status/{statusId}/like', [
 	'as' => 'status.like',
 	'middleware' => ['auth'],
 ]);
+

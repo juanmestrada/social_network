@@ -1,7 +1,7 @@
 @extends('templates.default') 
 
 @section('content')
-	<div class="row">
+	<div class="timeline-update row">
 		<div class="col-lg-6">
 			<form role="form" action="{{ route('status.post') }}" method="post">
 				<div class="form-group{{ $errors->has('status') ? ' has-error' : '' }}">
@@ -17,13 +17,13 @@
 		</div>
 	</div>
 
-	<div class="row">
+	<div class="timeline-container row">
 		<div class="col-lg-5">
 			@if (!$statuses->count())
 				<p>There is nothing in your timeline</p>
 			@else
 				@foreach ($statuses as $status)
-					<div class="media">
+					<div class="timeline-block media">
 					    <a class="pull-left" href="{{ route('profile.index', ['username' => $status->user->username]) }}">
 					        <img class="media-object" alt="{{ $status->user->getNameOrUsername() }}" src="{{ $status->user->getAvatarUrl() }}">
 					    </a>

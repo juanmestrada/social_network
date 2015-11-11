@@ -3,7 +3,7 @@
 @section('content')
 	<h3>Update your profile</h3>
 
-	<div class="row">
+	<div class="update-container row">
         <div class="col-lg-6">
             <form class="form-vertical" role="form" method="post" action="{{ route('profile.edit') }}">
                 <div class="row">
@@ -30,8 +30,22 @@
                     <label for="location" class="control-label">Location</label>
                     <input type="text" name="location" class="form-control" id="location" value="{{ Request::old('location') ?: Auth::user()->location }}">
                     @if ($errors->has('location'))
-                            	<span class="help-block">{{ $errors->first('location') }}</span>
-                            @endif	
+                    	<span class="help-block">{{ $errors->first('location') }}</span>
+                    @endif	
+                </div>
+                <div class="form-group{{ $errors->has('about') ? ' has-error': '' }}">
+                    <label for="about" class="control-label">About Me</label>
+                    <input type="text" name="about" class="form-control" id="about" value="{{ Request::old('about') ?: Auth::user()->about }}">
+                    @if ($errors->has('about'))
+                        <span class="help-block">{{ $errors->first('about') }}</span>
+                    @endif  
+                </div>
+                <div class="form-group{{ $errors->has('interest') ? ' has-error': '' }}">
+                    <label for="interest" class="control-label">My Interests</label>
+                    <input type="text" name="interest" class="form-control" id="about" value="{{ Request::old('interest') ?: Auth::user()->interest }}">
+                    @if ($errors->has('interest'))
+                        <span class="help-block">{{ $errors->first('interest') }}</span>
+                    @endif  
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-default">Update</button>

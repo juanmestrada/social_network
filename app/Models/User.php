@@ -24,6 +24,8 @@ class User extends Model implements AuthenticatableContract
         'first_name',
         'last_name',
         'location',
+        'about',
+        'interest',
     ];
 
    
@@ -54,6 +56,22 @@ class User extends Model implements AuthenticatableContract
     {
         return $this->first_name ?: $this->username;
     }
+
+    public function getabout()
+    {
+        return $this->about ?: $this->username;
+    }
+
+    public function getInterest()
+    {
+        return $this->interest ?: $this->username;
+    }
+
+    public function getImg()
+    {
+        return $this->image ?: $this->username;
+    }
+
 
     public function getAvatarUrl()
     {

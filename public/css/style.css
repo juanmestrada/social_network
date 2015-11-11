@@ -1,0 +1,139 @@
+ 
+
+body{
+	background-color: rgb(202,202,202);
+	
+}
+
+.home-wrapper{
+	background-color: white;
+	padding: 20px;
+	height: 600px;
+	border-radius: 10px;
+}
+
+.home-title{
+	text-align: center;
+}
+
+.home-info{
+	margin-top: 50px;
+
+}
+
+.home-img{
+
+	width: 30%;
+	margin: auto;
+	margin-top: 100px;
+}
+
+.navbar{
+	padding: 10px;
+	background-color: #1574bb;	
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.navbar-default .navbar-brand{
+	color: white;
+}
+.navbar-default .navbar-nav>li>a{
+	color: white;
+}	
+
+.container{
+	border-radius: 10px;
+	padding: 0;
+	
+	width: 90%;
+	margin: auto;
+	margin-top: 73px;
+}
+
+/* Profile */
+.profile-header {
+	background-color: white;
+	padding: 10px;
+	width: inherit;
+	margin: 0;
+	position: fixed;
+	z-index: 1;
+
+}
+.profile-img{
+	width: 100px;
+}
+
+.profile-name{
+	font-size: 32px;
+}
+
+.profile-about{
+	background-color: white;
+	padding: 10px;
+	margin-top: 165px; 
+}
+
+.profile-interest{
+	
+	background-color: white;
+	padding: 10px;
+	margin-top: 5px;
+}
+
+.profile-friends{
+	
+	background-color: white;
+	padding: 10px;
+	margin-top: 5px;
+}
+.left-holder{
+	
+	float: left;
+	position: fixed;
+	padding: 0;
+	overflow: scroll;
+}
+.profile-timeline{
+	float: right;
+	width: 50%;
+	padding: 10px;
+	margin-top: 165px;
+	
+}
+
+/* timeline */
+
+.timeline-update{
+
+}
+
+.timeline-block{
+	background-color: white;
+	padding: 10px;
+	width: 500px;
+}
+
+.timeline-container{
+	width: 60%;
+	margin: auto;
+}
+
+/* user block */
+
+.userblock-container{
+	background-color: white;
+}
+
+/* update */
+
+.update-container{
+	background-color: white;
+}
+
+
+
+

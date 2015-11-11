@@ -35,13 +35,17 @@ class ProfileController extends Controller
 		$this->validate($request, [
 			'first_name' => 'alpha|max:50',
 			'last_name' => 'alpha|max:50',
-			'location' => 'alpha|max:20',
+			'location' => 'max:20',
+			'about' => 'max:1000',
+			'interest' => 'max:1000',
 		]);
 
 		Auth::user()->update([
 			'first_name' => $request->input('first_name'),
 			'last_name' => $request->input('last_name'),
 			'location' => $request->input('location'),
+			'about' => $request->input('about'),
+			'interest' => $request->input('interest'),
 		]);
 
 		return redirect()

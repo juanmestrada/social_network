@@ -30,7 +30,7 @@ class StatusController extends Controller
 		$this->validate($request, [
 			"reply-{$statusId}" => 'required|max:1000',
 		], [
-			'required' => 'The reply body is required!'
+			'required' => 'The reply body is required.'
 		]);
 
 		$status = Status::notReply()->find($statusId);
@@ -44,7 +44,7 @@ class StatusController extends Controller
 		}
 
 		$reply = Status::create([
-			'body' => $request->input('reply-{$statusId}'),
+			'body' => $request->input("reply-{$statusId}"),
 		])->user()->associate(Auth::user());
 
 		$status->replies()->save($reply);

@@ -28,7 +28,7 @@ class AuthController extends Controller
  			'password' => bcrypt($request->input('password')),
  		]);
 
- 		return redirect()->route('home')->with('info', "Your account has been created!");
+ 		return redirect()->route('home')->with('info', "Your account has been created, you may now sign in");
 	}
 
 	public function getSignin()
